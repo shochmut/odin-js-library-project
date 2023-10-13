@@ -1,0 +1,180 @@
+@font-face {
+    font-family: YoungSerif;
+    src: url(assets/Young_Serif/YoungSerif-Regular.ttf);
+}
+
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    height: 100%;
+}
+
+body {
+    font-family: YoungSerif;
+    margin: 0 0 0 0;
+    height: 100%;
+}
+
+hr {
+    border-top: 1px solid black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 0;
+}
+
+h3, p {
+    margin: 0;
+    padding: 0;
+    /* text-wrap: pretty; */
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 250px;
+}
+
+.page-wrapper {
+    display:grid;
+    grid-template-rows: 100px 1fr;
+    height: 100%;
+}
+
+.page-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #778DA9;
+    box-shadow: 0 -6px 30px 5px rgba(0,0,0,0.7);
+}
+
+form {
+    border: 5px solid #415A77;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.page-title {
+    text-wrap: nowrap;
+    justify-self: left;
+    margin-left: 50px;
+}
+
+.page-title-icon {
+    max-height: 50px;
+    margin-right: 20px;
+}
+
+#books {
+    display: grid;
+    gap: 30px;
+    padding: 30px 10px 30px 10px;
+    height: 100%;
+    background-color:#1B263B;
+    grid-auto-flow: row;
+    grid-auto-rows: 18%; /* play with this to change height of the children, 50% will fill half */
+    grid-template-columns: 1fr 1fr 1fr; /* do not set template columns and rows */
+    grid-template-rows: unset;
+    overflow: scroll;
+}
+
+.book-card {
+    background-color: #E0E1DD;
+    display: grid;
+    grid-template-rows: 1fr 10px 1fr 1fr;
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 -3px 0px 3px rgba(0,0,0,0.5);
+    height: 150px;
+    max-width:400px;
+    overflow: hidden;
+}
+
+.card-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px;
+}
+
+.card-pages {
+    font-size: 12px;
+    text-align: center;
+    align-self: center;
+    padding-right: 20px;
+}
+
+.sidebar {
+    background-color: #415A77;
+    width: 20vw;
+    height: 100vh;
+    padding: 0;
+    position: fixed;
+    left: 80%;
+    transition: transform 300ms ease-in;
+}
+
+.sidebar--isHidden {
+    transform: translateX(20vw);
+    transition: transform 300ms ease-out;
+}
+
+
+
+
+
+
+
+
+
+/* button formatting ------------------------------------------------------------------- */
+.button-71 {
+  background-color: #415A77;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
