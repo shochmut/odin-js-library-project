@@ -128,6 +128,21 @@ form {
     transition: transform 300ms ease-out;
 }
 
+.read-toggle-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#remove-book {
+    background-color: #ED0800;
+    padding: 5px;
+}
+
+#toggle-read {
+    background-color: #33b249;
+    padding: 5px;
+}
 
 
 
@@ -182,3 +197,4 @@ form {
     padding: 16px 48px;
   }
 }
+
