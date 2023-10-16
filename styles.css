@@ -53,7 +53,7 @@ h3, p {
 }
 
 form {
-    border: 5px solid #415A77;
+    background-color: #1B263B;
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr;
@@ -110,17 +110,21 @@ form {
 }
 
 .sidebar {
-    background-color: #415A77;
-    width: 20vw;
+    background-color: rgba(255,255,255,0.5);
+    width: 40vw;
     height: 100vh;
     padding: 0;
     position: fixed;
-    left: 80%;
+    left: 60%;
     transition: transform 300ms ease-in;
+    margin-top: 100px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 .sidebar--isHidden {
-    transform: translateX(20vw);
+    transform: translateX(40vw);
     transition: transform 300ms ease-out;
 }
 
